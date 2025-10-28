@@ -36,6 +36,12 @@ window.addEventListener('DOMContentLoaded', function () {
             resultado.style.color = 'red';
             return;
         }
+        // Validar que la edad esté dentro del rango permitido
+        if (usuario.edad < 0 || usuario.edad > 100) {
+            resultado.textContent = 'La edad debe estar entre 0 y 100 años.';
+            resultado.style.color = 'red';
+            return;
+        }
         // Validar que todos los campos estén completos
         if (!usuario.nombre || !usuario.apellidoPaterno || isNaN(usuario.edad) || !usuario.genero || !usuario.pais) {
             resultado.textContent = 'Por favor, complete todos los campos correctamente.';
