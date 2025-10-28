@@ -1,0 +1,8 @@
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# Package manager files
+package-lock.json
