@@ -42,6 +42,12 @@ window.addEventListener('DOMContentLoaded', function () {
             resultado.style.color = 'red';
             return;
         }
+        // Validar que la edad esté dentro del rango permitido
+        if (usuario.edad < 0 || usuario.edad > 100) {
+            resultado.textContent = 'La edad debe estar entre 0 y 100 años.';
+            resultado.style.color = 'red';
+            return;
+        }
         // Mostrar resultado del registro
         resultado.textContent = "Registro exitoso: ".concat(usuario.nombre, " ").concat(usuario.apellidoPaterno, ", Edad: ").concat(usuario.edad, ", Género: ").concat(usuario.genero, ", País: ").concat(usuario.pais);
         resultado.style.color = '#0078d4';
